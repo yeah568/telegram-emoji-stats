@@ -1,0 +1,10 @@
+{
+  "extends": "google",
+  "env": {
+    "node": true
+  },
+  "rules": {
+    "no-console": "off",
+    "linebreak-style": "off"
+  }
+}

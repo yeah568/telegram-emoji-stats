@@ -1,0 +1,22 @@
+{
+  "name": "telegram-emoji-stats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeah568/telegram-emoji-stats.git"
+  },
+  "author": "James Liu",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/yeah568/telegram-emoji-stats/issues"
+  },
+  "homepage": "https://github.com/yeah568/telegram-emoji-stats#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.21.1"
+  }
+}
