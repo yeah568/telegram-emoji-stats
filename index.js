@@ -13,9 +13,10 @@ const bot = new TelegramBot(config.bot_token, {polling: true});
 
 bot.onText(/\/emojistats/, (msg, match) => {
 	var chatID = msg.chat.id;
+	var chatName = msg.chat.title || chatID;
 	client.zrevrangebyscore(`chat:${chatID}`, '+inf', 0, 'WITHSCORES', 'LIMIT', 0, 10, (err, res) => {
 		if (err) throw err;
-		var respString = `Top emojis in chat ${chatID}: \n`;
+		var respString = `Top emojis in chat ${chatName}: \n`;
 		for (var i = 0; i < res.length; i+=2) {
 			respString += `${EmojiData.from_unified(res[i]).render()} - ${res[i+1]}\n`
 		}
